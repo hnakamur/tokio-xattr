@@ -1,0 +1,13 @@
+[package]
+name = "tokio-xattr"
+version = "0.1.0"
+authors = ["Hiroaki Nakamura <hnakamur@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+futures = "0.1"
+tokio = "0.1"
+tokio-fs = "0.1"
+tokio-io = "0.1"
+tokio-threadpool = "0.1"
+blocking_xattr = { package = "xattr", version = "0.2" }
