@@ -13,7 +13,7 @@ It is written in the Rust programming language and it uses
 
 The API docs for the master branch are published [here][master-dox].
 
-[master-dox]: https://hnakamur.github.io/tokio/doc/tokio/
+[master-dox]: https://hnakamur.github.io/tokio-xattr/doc/tokio_xattr/
 
 ## License
 
