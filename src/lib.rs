@@ -1,32 +1,14 @@
 #![deny(missing_docs, missing_debug_implementations)]
 #![doc(html_root_url = "https://docs.rs/tokio-xattr/0.1.0")]
 
-//! Asynchronous file and standard stream adaptation.
+//! A pure-Rust library to manage extended attributes asynchronously.
 //!
-//! This module contains utility methods and adapter types for input/output to
-//! files or standard streams (`Stdin`, `Stdout`, `Stderr`), and
-//! filesystem manipulation, for use within (and only within) a Tokio runtime.
+//! It provides support for manipulating extended attributes (xattrs)
+//! on modern Unix filesystems.
+//! See the attr(5) manpage for more details.
 //!
-//! Tasks run by *worker* threads should not block, as this could delay
-//! servicing reactor events. Portable filesystem operations are blocking,
-//! however. This module offers adapters which use a [`blocking`] annotation
-//! to inform the runtime that a blocking operation is required. When
-//! necessary, this allows the runtime to convert the current thread from a
-//! *worker* to a *backup* thread, where blocking is acceptable.
-//!
-//! ## Usage
-//!
-//! Where possible, users should prefer the provided asynchronous-specific
-//! traits such as [`AsyncRead`], or methods returning a `Future` or `Poll`
-//! type. Adaptions also extend to traits like `std::io::Read` where methods
-//! return `std::io::Result`.  Be warned that these adapted methods may return
-//! `std::io::ErrorKind::WouldBlock` if a *worker* thread can not be converted
-//! to a *backup* thread immediately. See [tokio-threadpool] for more details
-//! of the threading model and [`blocking`].
-//!
-//! [`blocking`]: https://docs.rs/tokio-threadpool/0.1/tokio_threadpool/fn.blocking.html
-//! [`AsyncRead`]: https://docs.rs/tokio-io/0.1/tokio_io/trait.AsyncRead.html
-//! [tokio-threadpool]: https://docs.rs/tokio-threadpool/0.1/tokio_threadpool
+//! This module uses tokio_threadpool to manage extended attributes
+//! asynchronously.
 
 extern crate futures;
 extern crate tokio_io;
