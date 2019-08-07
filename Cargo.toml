@@ -1,13 +1,14 @@
 [package]
 name = "tokio-xattr"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Hiroaki Nakamura <hnakamur@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-futures = "0.1"
-tokio = "0.1"
-tokio-fs = "0.1"
-tokio-io = "0.1"
-tokio-threadpool = "0.1"
+futures-core-preview = "= 0.3.0-alpha.17"
+futures-util-preview = "= 0.3.0-alpha.17"
+tokio = { git = "https://github.com/tokio-rs/tokio" }
+tokio-fs = { git = "https://github.com/tokio-rs/tokio" }
+tokio-io = { git = "https://github.com/tokio-rs/tokio" }
+tokio-threadpool = { git = "https://github.com/tokio-rs/tokio" }
 blocking_xattr = { package = "xattr", version = "0.2" }
