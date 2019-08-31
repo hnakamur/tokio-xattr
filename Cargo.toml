@@ -13,6 +13,9 @@ Filesystem xattr (extended attributes) API for Tokio.
 """
 keywords = ["tokio", "xattr"]
 categories = ["asynchronous", "filesystem"]
+exclude = [
+    "docs/*",
+]
 
 [dependencies]
 blocking_xattr = { package = "xattr", version = "0.2.2" }
