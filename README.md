@@ -3,8 +3,7 @@
 A library for managing extented attributes (xattrs) asynchronously
 on modern Unix filesystems.
 It is written in the Rust programming language and it uses
-[Tokio](https://crates.io/crates/tokio) and
-[tokio-threadpool](https://crates.io/crates/tokio-threadpool).
+[Tokio](https://crates.io/crates/tokio)
 
 [![MIT licensed][mit-badge]][mit-url]
 
