@@ -3,6 +3,16 @@ name = "tokio-xattr"
 version = "0.2.1-alpha.1"
 authors = ["Hiroaki Nakamura <hnakamur@gmail.com>"]
 edition = "2018"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/hnakamur/tokio-xattr"
+homepage = "https://github.com/hnakamur/tokio-xattr"
+documentation = "https://hnakamur.github.io/tokio-xattr/tokio_xattr/"
+description = """
+Filesystem xattr (extended attributes) API for Tokio.
+"""
+keywords = ["tokio", "xattr"]
+categories = ["asynchronous", "filesystem"]
 
 [dependencies]
 blocking_xattr = { package = "xattr", version = "0.2.2" }
