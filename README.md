@@ -10,9 +10,7 @@ It is written in the Rust programming language and it uses
 [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: LICENSE
 
-The API docs for the master branch are published [here][master-dox].
-
-[master-dox]: https://hnakamur.github.io/tokio-xattr/tokio_xattr/
+[API Docs](https://hnakamur.github.io/tokio-xattr/tokio_xattr/)
 
 ## License
 
