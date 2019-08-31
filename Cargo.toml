@@ -1,14 +1,21 @@
 [package]
 name = "tokio-xattr"
-version = "0.2.0"
+version = "0.2.1-alpha.1"
 authors = ["Hiroaki Nakamura <hnakamur@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-futures-core-preview = "= 0.3.0-alpha.17"
-futures-util-preview = "= 0.3.0-alpha.17"
-tokio = { git = "https://github.com/tokio-rs/tokio" }
-tokio-fs = { git = "https://github.com/tokio-rs/tokio" }
-tokio-io = { git = "https://github.com/tokio-rs/tokio" }
-tokio-threadpool = { git = "https://github.com/tokio-rs/tokio" }
-blocking_xattr = { package = "xattr", version = "0.2" }
+blocking_xattr = { package = "xattr", version = "0.2.2" }
+
+tokio-io = { version = "=0.2.0-alpha.4", features = ["util"] }
+tokio-executor = { version = "=0.2.0-alpha.4", features = ["blocking"] }
+
+futures-core-preview = "= 0.3.0-alpha.18"
+futures-util-preview = "= 0.3.0-alpha.18"
+
+[dev-dependencies]
+tokio = { version = "=0.2.0-alpha.4" }
+tokio-test = { version = "=0.2.0-alpha.4" }
+
+rand = "0.7"
+tempfile = "3"
