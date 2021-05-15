@@ -22,5 +22,5 @@ where
     F: FnOnce() -> io::Result<T> + Send + 'static,
     T: Send + 'static,
 {
-    tokio_executor::blocking::run(f).await
+    tokio::task::spawn_blocking(f).await?
 }

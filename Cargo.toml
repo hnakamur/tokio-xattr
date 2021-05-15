@@ -20,15 +20,14 @@ exclude = [
 [dependencies]
 blocking_xattr = { package = "xattr", version = "0.2.2" }
 
-tokio-io = { version = "=0.2.0-alpha.4", features = ["util"] }
-tokio-executor = { version = "=0.2.0-alpha.4", features = ["blocking"] }
+tokio = { version = "1", features = ["rt", "io-util"] }
 
-futures-core-preview = "= 0.3.0-alpha.18"
-futures-util-preview = "= 0.3.0-alpha.18"
+futures-core = "0.3"
+futures-util = "0.3"
 
 [dev-dependencies]
-tokio = { version = "=0.2.0-alpha.4" }
-tokio-test = { version = "=0.2.0-alpha.4" }
+tokio = { version = "1" }
+tokio-test = { version = "0.4" }
 
 rand = "0.7"
 tempfile = "3"
